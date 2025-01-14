@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using BlogChallenge.Screens.TagScreens;
+using Microsoft.Data.SqlClient;
 
 namespace BlogChallenge
 {
@@ -10,13 +11,46 @@ namespace BlogChallenge
         {
             Console.Clear();
 
-            var connection = new SqlConnection(CONNECTION_STRING);
-            connection.Open();
+            Database.Connection = new SqlConnection(CONNECTION_STRING);
+            Database.Connection.Open();
 
-            //
+            Load();
 
-            connection.Close();
             Console.ReadKey();
+            Database.Connection.Close();
         }
+
+        public static void Load()
+        {
+            Console.Clear();
+            Console.WriteLine("MEU BLOG");
+            Console.WriteLine("-------------------");
+            Console.WriteLine("O que deseja fazer?");
+            Console.WriteLine();
+            Console.WriteLine("1. Gestão de usuário");
+            Console.WriteLine("2. Gestão de perfil");
+            Console.WriteLine("3. Gestão de categoria");
+            Console.WriteLine("4. Gestão de tag");
+            Console.WriteLine("5. Vincular perfil/usuário");
+            Console.WriteLine("6. Vincular post/tag");
+            Console.WriteLine("7. Relatórios");
+            Console.WriteLine();
+            Console.WriteLine("0. Sair");
+            Console.WriteLine();
+            Console.Write("Digite a opção desejada: ");
+            var option = short.Parse(Console.ReadLine()!);
+
+            switch (option)
+            {
+                case 4:
+                    MenuTagScreen.Load();
+                    break;
+                case 0:
+                    Environment.Exit(0);
+                    break;
+                default: Load(); break;
+            }
+        }
+
     }
 }

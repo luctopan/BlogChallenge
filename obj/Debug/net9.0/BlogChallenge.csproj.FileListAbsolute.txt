@@ -47,3 +47,4 @@ C:\dev\projects\BlogChallenge\obj\Debug\net9.0\refint\BlogChallenge.dll
 C:\dev\projects\BlogChallenge\obj\Debug\net9.0\BlogChallenge.pdb
 C:\dev\projects\BlogChallenge\obj\Debug\net9.0\BlogChallenge.genruntimeconfig.cache
 C:\dev\projects\BlogChallenge\obj\Debug\net9.0\ref\BlogChallenge.dll
+C:\dev\projects\BlogChallenge\obj\Debug\net9.0\BlogChallenge.sourcelink.json

@@ -5,31 +5,36 @@ namespace BlogChallenge.Screens.TagScreens
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Gestão de tags");
-            Console.WriteLine("--------------");
+            Console.WriteLine("GESTÃO DE TAGS");
+            Console.WriteLine("-------------------");
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
-            Console.WriteLine("1 - Listar tags");
-            Console.WriteLine("2 - Cadastrar tags");
-            Console.WriteLine("3 - Atualizar tag");
-            Console.WriteLine("4 - Excluir tag");
+            Console.WriteLine("1. Listar tags");
+            Console.WriteLine("2. Cadastrar tags");
+            Console.WriteLine("3. Atualizar tag");
+            Console.WriteLine("4. Excluir tag");
             Console.WriteLine();
+            Console.WriteLine("0. Voltar");
             Console.WriteLine();
+            Console.Write("Digite a opção desejada: ");
             var option = short.Parse(Console.ReadLine()!);
 
             switch (option)
             {
                 case 1:
-                    Load();
+                    ListTagScreen.Load();
                     break;
                 case 2:
-                    Load();
+                    CreateTagScreen.Load();
                     break;
                 case 3:
-                    Load();
+                    UpdateTagScreen.Load();
                     break;
                 case 4:
-                    Load();
+                    DeleteTagScreen.Load();
+                    break;
+                case 0:
+                    Program.Load();
                     break;
                 default: Load(); break;
             }

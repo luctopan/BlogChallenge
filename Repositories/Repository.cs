@@ -5,20 +5,18 @@ namespace BlogChallenge.Repositories
 {
     public class Repository<T> where T : class
     {
-        // connection
         private readonly SqlConnection _connection;
         public Repository(SqlConnection connection)
             => _connection = connection;
 
-        // CRUD genérico
-        public IEnumerable<T> Get() // não precisa ser static, pois será instanciada (classe static sobe junto com a aplicação)
-            => _connection.GetAll<T>(); // SELECT * FROM [User]
+        public IEnumerable<T> Get()
+            => _connection.GetAll<T>();
 
-        public T Get(int id) // não precisa ser static, pois será instanciada (classe static sobe junto com a aplicação)
-            => _connection.Get<T>(id); // SELECT * FROM [Role] WHERE [Id] = 1
+        public T Get(int id)
+            => _connection.Get<T>(id);
 
-        public void Create(T model) // não precisa ser static, pois será instanciada (classe static sobe junto com a aplicação)        
-            => _connection.Insert<T>(model); // SELECT * FROM [Role] WHERE [Id] = 1        
+        public void Create(T model)
+            => _connection.Insert<T>(model);
 
         public void Update(T model)
             => _connection.Update<T>(model);
