@@ -1,0 +1,14 @@
+1. Cadastro de usuário [OK]
+2. Cadastro de perfil [OK]
+3. Cadastro de categoria [OK]
+4. Cadastro de post
+5. Cadastro de tag [OK]
+
+6. Vincular um usuário a um perfil
+7. Vincular um post a uma tag
+8. Listar os usuários (Nome, email e perfis separados por vírgula)
+9. Listar categorias com quantidade de posts
+10. Listar tags com quantidade de posts
+11. Listar os posts de uma categoria
+12. Listar todos os posts com a sua categoria
+13. Listar os posts com suas tags (separadas por vírgula)
